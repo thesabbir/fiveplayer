@@ -41,6 +41,7 @@ app.on('ready', () => {
     mainWindow.openDevTools();
   }
 
+
   if (process.platform === 'darwin') {
     template = [{
       label: 'Five Player',
