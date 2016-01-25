@@ -44,13 +44,13 @@
       }
     },
     "test": {
-      "command": "mocha --compilers js:babel-core/register --recursive --require ./test/setup.js test/**/*.spec.js",
+      "command": "echo 'no test specified'",
       "env": {
         "NODE_ENV": "test"
       }
     },
     "test-e2e": {
-      "command": "mocha --compilers js:babel-core/register --require ./test/setup.js --require co-mocha ./test/e2e.js",
+      "command": "echo 'no test specified'",
       "env": {
         "NODE_ENV": "test"
       }
@@ -94,9 +94,6 @@
     "babel-preset-react-hmre": "^1.0.1",
     "babel-preset-stage-0": "^6.3.13",
     "better-npm-run": "0.0.5",
-    "chai": "^3.3.0",
-    "chromedriver": "^2.19.0",
-    "co-mocha": "^1.1.2",
     "css-loader": "^0.23.1",
     "css-modules-require-hook": "^2.0.2",
     "debug-menu": "^0.2.0",
@@ -110,9 +107,7 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "fbjs-scripts": "^0.5.0",
-    "jsdom": "^7.2.2",
     "minimist": "^1.2.0",
-    "mocha": "^2.3.0",
     "node-libs-browser": ">= 0.4.0 <=0.6.0",
     "postcss": "^5.0.13",
     "postcss-modules-extract-imports": "^1.0.0",
@@ -124,8 +119,6 @@
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-devtools-log-monitor": "^1.0.1",
     "redux-logger": "^2.3.1",
-    "selenium-webdriver": "^2.48.2",
-    "sinon": "^1.17.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.1",
     "webpack-dev-middleware": "^1.2.0",
