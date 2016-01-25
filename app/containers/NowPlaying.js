@@ -8,7 +8,7 @@ export default class NowPlayingPage extends Component {
     return (
       <div>
         <DropFiles>
-          <Player />
+          <Player source="file:///Volumes/Data/Damien%20Rice%20-%20Volcano%20-%20Official%20Video-ZduDvIBu3EU.mp4"/>
         </DropFiles>
       </div>
     )

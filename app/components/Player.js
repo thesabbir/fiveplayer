@@ -1,14 +1,42 @@
 import React, { Component } from 'react';
+import { findDOMNode } from 'react-dom';
 import styles from './Playlist.module.css';
 
 console.log(styles);
 
 export default class Player extends Component {
+
+  constructor() {
+    super();
+  }
+
+  state = {
+    playing: false
+  };
+
+
+  componentDidMount() {
+    this.$video = findDOMNode(this.refs.video);
+  }
+
+  playVideo = () => {
+    if (this.state.playing) {
+      this.$video.pause();
+      this.state.playing = false;
+
+    } else {
+      this.$video.play();
+      this.state.playing = true;
+    }
+  };
+
+
   render() {
-    let source = 'file:///Volumes/Data/Damien%20Rice%20-%20Volcano%20-%20Official%20Video-ZduDvIBu3EU.mp4';
+    let { source, ...others} = this.props;
+
     return (
-      <div className={styles.player}>
-        <video src={source} autoPlay controls height={window.innerHeight} width={window.innerWidth}>
+      <div className={styles.player} onClick={this.playVideo}>
+        <video ref='video' src={source} height={window.innerHeight} width={window.innerWidth}>
         </video>
       </div>
 
